@@ -1,9 +1,11 @@
 # UniQR-SDK 🚀  
-Генератор и валидатор **«универсального QR»** (СБП + цифровой рубль) на TypeScript.
+Генератор и валидатор **универсального QR** (СБП + цифровой рубль) на TypeScript.
 
-| npm | build | coverage |
-|-----|-------|----------|
-| [![npm](https://img.shields.io/npm/v/uniqr-sdk)](https://npmjs.com/uniqr-sdk) | ![CI](https://github.com/ВАШ_ЮЗЕР/uniqr-sdk/actions/workflows/ci.yml/badge.svg) | ![cov](./badges/coverage.svg) |
+| npm | CI | coverage |
+|-----|----|----------|
+| [![npm](https://img.shields.io/npm/v/uniqr-sdk)](https://www.npmjs.com/package/uniqr-sdk) | ![CI](https://github.com/Vadimdudnikov/uniqr-sdk/actions/workflows/ci.yml/badge.svg) | ![cov](./badges/coverage.svg) |
+
+---
 
 ## Быстрый старт
 
@@ -15,9 +17,41 @@ pnpm add uniqr-sdk
 import { generateQR } from 'uniqr-sdk';
 
 const tlv = generateQR({
-  merchantId: 'S1',
-  instruments: ['SBP', 'CRUB'],
-  amount: '199'
+  merchantId:   'S1',
+  instruments:  ['SBP', 'CRUB'],
+  amount:       '199'
 });
-console.log(tlv); // 00020101…
+console.log(tlv);        // → 00020101…
 ```
+
+---
+
+## Демо
+
+| Канал | Как запустить |
+|-------|---------------|
+| **Web-виджет** | <https://uniqr-demo.vercel.app> |
+| **Docker REST** | ```
+docker run -p 8080:8080 ghcr.io/vadimdudnikov/uniqr-demo:0.1
+``` |
+| **CLI** | ```
+npm i -g uniqr-sdk
+uniqr gen -m S1 -i CRUB -a 99
+``` |
+
+---
+
+## Возможности
+
+* **🔀 Один QR — два инструмента.** СБП и цифровой рубль в одной TLV-строке (`26`, `27` MAI).  
+* **🧩 Полный API.** `generateQR`, `validateQR`, TLV-encode/decode, CRC-16 (CCITT).  
+* **📦 Лёгкий рантайм.** < 35 kB gzip, без нативных зависимостей.  
+* **🛠️ Сразу ESM + TypeScript.** Подходит для Node 20 и браузера; полные `.d.ts`.  
+* **⚡ Docker-демо 45 MB.** Один `docker run` — и REST-шлюз готов.  
+
+---
+
+## Лицензия
+MIT — см. [LICENSE](LICENSE).
+
+> **Связаться:** vadim@example.com • TG @uniqr_sdk
