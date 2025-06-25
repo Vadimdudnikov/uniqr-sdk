@@ -9,3 +9,15 @@
 
 ```bash
 pnpm add uniqr-sdk
+```
+
+```ts
+import { generateQR } from 'uniqr-sdk';
+
+const tlv = generateQR({
+  merchantId: 'S1',
+  instruments: ['SBP', 'CRUB'],
+  amount: '199'
+});
+console.log(tlv); // 00020101…
+```
