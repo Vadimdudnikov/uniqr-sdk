@@ -1,0 +1,31 @@
+{
+  "name": "uniqr-sdk",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "bin": {
+    "uniqr": "./dist/bin/uniqr.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "pnpm typecheck && tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "crc": "^4.3.2",
+    "express": "^5.1.0",
+    "qrcode-svg": "^1.1.0"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.12.6",
+    "@swc/jest": "^0.2.38",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^29.5.14",
+    "jest": "30",
+    "tsx": "^4.7.0",
+    "typescript": "^5.8.3"
+  }
+}
