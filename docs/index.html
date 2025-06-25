@@ -1,0 +1,71 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>uniqr-sdk</title><meta name="description" content="Documentation for uniqr-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">uniqr-sdk</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>uniqr-sdk</h1></div><div class="tsd-panel tsd-typography"><h1 id="uniqr-sdk-🚀" class="tsd-anchor-link">UniQR-SDK 🚀<a href="#uniqr-sdk-🚀" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>Генератор и валидатор <strong>универсального QR</strong> (СБП + цифровой рубль) на TypeScript.</p>
+<table>
+<thead>
+<tr>
+<th>npm</th>
+<th>CI</th>
+<th>coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.npmjs.com/package/uniqr-sdk"><img src="https://img.shields.io/npm/v/uniqr-sdk" alt="npm"></a></td>
+<td><img src="https://github.com/Vadimdudnikov/uniqr-sdk/actions/workflows/ci.yml/badge.svg" alt="CI"></td>
+<td><img src="./badges/coverage.svg" alt="cov"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="быстрый-старт" class="tsd-anchor-link">Быстрый старт<a href="#быстрый-старт" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">uniqr-sdk</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="ts"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">generateQR</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;uniqr-sdk&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">tlv</span><span class="hl-1"> = </span><span class="hl-0">generateQR</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">merchantId:</span><span class="hl-1">   </span><span class="hl-2">&#39;S1&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">instruments:</span><span class="hl-1">  [</span><span class="hl-2">&#39;SBP&#39;</span><span class="hl-1">, </span><span class="hl-2">&#39;CRUB&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">amount:</span><span class="hl-1">       </span><span class="hl-2">&#39;199&#39;</span><br/><span class="hl-1">});</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-4">tlv</span><span class="hl-1">);        </span><span class="hl-7">// → 00020101…</span>
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<h2 id="демо" class="tsd-anchor-link">Демо<a href="#демо" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>Канал</th>
+<th>Как запустить</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Web-виджет</strong></td>
+<td><a href="https://uniqr-demo.vercel.app">https://uniqr-demo.vercel.app</a></td>
+</tr>
+<tr>
+<td><strong>Docker REST</strong></td>
+<td>```</td>
+</tr>
+<tr>
+<td>docker run -p 8080:8080 <a href="http://ghcr.io/vadimdudnikov/uniqr-demo:0.1">ghcr.io/vadimdudnikov/uniqr-demo:0.1</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="|">| **CLI** | ```
+npm i -g uniqr-sdk
+uniqr gen -m S1 -i CRUB -a 99
+``` |
+
+---
+
+## Возможности
+
+* **🔀 Один QR — два инструмента.** СБП и цифровой рубль в одной TLV-строке (`26`, `27` MAI).  
+* **🧩 Полный API.** `generateQR`, `validateQR`, TLV-encode/decode, CRC-16 (CCITT).  
+* **📦 Лёгкий рантайм.** < 35 kB gzip, без нативных зависимостей.  
+* **🛠️ Сразу ESM + TypeScript.** Подходит для Node 20 и браузера; полные `.d.ts`.  
+* **⚡ Docker-демо 45 MB.** Один `docker run` — и REST-шлюз готов.  
+
+---
+
+## Лицензия
+MIT — см. [LICENSE](LICENSE).
+
+> **Связаться:** vadim@example.com • TG @uniqr_sdk
+</code><button type="button">Copy</button></pre>
+
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#uniqr-sdk-🚀"><span>Uni<wbr/>QR-<wbr/>SDK 🚀</span></a><ul><li><a href="#быстрый-старт"><span>Быстрый старт</span></a></li><li><a href="#демо"><span>Демо</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">uniqr-sdk</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

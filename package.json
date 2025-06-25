@@ -9,11 +9,11 @@
     "uniqr": "./dist/bin/uniqr.js"
   },
   "scripts": {
-    "build":       "vite build",
-    "build:web":   "vite build",
-    "build:lib":   "pnpm typecheck && tsc -p tsconfig.json",
-    "typecheck":   "tsc -p tsconfig.json --noEmit",
-    "test":        "jest"
+    "build": "vite build",
+    "build:web": "vite build",
+    "build:lib": "pnpm typecheck && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "jest"
   },
   "dependencies": {
     "commander": "^14.0.0",
@@ -30,6 +30,7 @@
     "buffer": "^6.0.3",
     "jest": "30",
     "tsx": "^4.7.0",
+    "typedoc": "^0.28.5",
     "typescript": "^5.8.3",
     "vite": "^7.0.0"
   }
