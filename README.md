@@ -3,7 +3,7 @@
 
 | npm | CI | coverage | postman |
 |-----|----|----------|---------|
-| [![npm](https://img.shields.io/npm/v/uniqr-sdk)](https://www.npmjs.com/package/uniqr-sdk) | ![CI](https://github.com/Vadimdudnikov/uniqr-sdk/actions/workflows/ci.yml/badge.svg) | ![cov](./badges/coverage.svg) |[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/collections/123abc456def789)|
+| [![npm](https://img.shields.io/npm/v/uniqr-sdk)](https://www.npmjs.com/package/uniqr-sdk) | ![CI](https://github.com/Vadimdudnikov/uniqr-sdk/actions/workflows/ci.yml/badge.svg) | ![cov](./badges/coverage.svg) |[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/vadim-9897865/uniqe-demo/collection/hjwf5es/uniqr-demo?action=share&creator=46206182)|
 
 ---
 
