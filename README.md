@@ -49,4 +49,4 @@ console.log(tlv);        // → 00020101…
 ## Лицензия
 MIT — см. [LICENSE](LICENSE).
 
-> **Связаться:** vadim@example.com • TG @uniqr_sdk
+> **Связаться:** vadimdudnikov73@gmail.com • TG @vadimdudnikov
